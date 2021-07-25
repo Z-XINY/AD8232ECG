@@ -11,6 +11,6 @@ class AD8232:
         elif LO == 2:
             return self.LO2Pin.value()
     def read(self):
-        data = self.adc.read() #读取心电s数据
+        data = self.adc.read() #读取心电数据
         return data
     
