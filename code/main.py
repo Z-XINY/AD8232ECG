@@ -212,7 +212,7 @@ def calcul_BPM():
 def draw_ECG():
     global heartSensorValue, height_new, height_old, line_clr
     y = int(heartSensorValue / 1200 * 240) - 100   
-    height_new = 240 - y + 15
+    height_new = 240 - y + 15   #因为本人买回来的AD8232内部的线接反了,导致得出的结果与实际刚好相反根据x轴对称,如果各位是正常的ad8232,这句话改成height_new = y + 15就可以了(+15只是让图像整体往上偏移15个像素让基线居中)
 
     if height_new <= 40:
         height_new = 180
